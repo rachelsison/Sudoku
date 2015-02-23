@@ -28,10 +28,25 @@
           console.log('board', $(".sodukuBoard"));
           $(".sodukuBoard").append(temp);
           for(var j=0; j < 9; j++){
-            $('.'+ currentRowName).append('<td>'+ board[i][j] + '</td>');
+            var elem = '<td onclick="incrementNumber(this,['+i+', '+j+'])">'+ board[i][j] + '</td>';
+            console.log("ELEM: ", elem);
+            $('.'+ currentRowName).append(elem);
           }
         }
       });
+
+      var incrementNumber = function(elem, boardIndexes){
+        console.log('indices: ', boardIndexes);
+        var row = boardIndexes[0];
+        var column = boardIndexes[1];
+        if(board[row][column] === 9 || board[row][column] === 0){
+          elem.innerHTML = 1;
+          board[row][column] = 1;
+        }else{
+          elem.innerHTML = board[row][column] + 1;
+          board[row][column] += 1;
+        }
+      }
     </script>
     <table class="sodukuBoard">
     </table>
