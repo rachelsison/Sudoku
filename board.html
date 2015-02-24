@@ -1,7 +1,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
   </head>
   <body>
     <p class="paragraph">
@@ -25,8 +26,8 @@
           console.log("rowName", currentRowName);
           var temp = '<tr class="'+currentRowName+'"></tr>';
           console.log(temp);
-          console.log('board', $(".sodukuBoard"));
-          $(".sodukuBoard").append(temp);
+          console.log('board', $(".sudokuBoard"));
+          $(".sudokuBoard").append(temp);
           for(var j=0; j < 9; j++){
             var elem = '<td onclick="incrementNumber(this,['+i+', '+j+'])">'+ board[i][j] + '</td>';
             console.log("ELEM: ", elem);
@@ -48,7 +49,7 @@
         }
       }
     </script>
-    <table class="sodukuBoard">
+    <table class="sudokuBoard" background="woodbackground.jpg">
     </table>
   </body>
 </html>
