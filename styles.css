@@ -12,10 +12,10 @@
 }
 
 td {
+  box-shadow: inset;
   cursor: pointer;
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 20px;
-  border:5px solid white;
   border-spacing: 0;
   padding-top: 10px;
   -webkit-touch-callout: none;
@@ -24,10 +24,14 @@ td {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  border-image: url(greybackground.jpg) 20 20 round;
+  border-image-repeat: none;
 }
 
 table {
   border-spacing: 0;
   border-radius: 25px;
+  border-image: url(greybackground.jpg) 20 20 round;
+  border-image-repeat: none;
 }
 
