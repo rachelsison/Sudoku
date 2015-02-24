@@ -5,52 +5,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>    
     <link rel="stylesheet" type="text/css" href="http://www.google.com/fonts#QuickUsePlace:quickUse/Family:Shadows+Into+Light">
   </head>
-  <body background="greybackground.jpg">
+  <body>
     <p class="paragraph">
     </p>
-    <script type="text/javascript">
-      var board = [
-        [9, 5, 3, 2, 1, 4, 7, 6, 8], 
-        [2, 7, 6, 8, 5, 3, 4, 1, 9],
-        [8, 1, 4, 6, 7, 9, 2, 3, 5],
-        [7, 4, 8, 5, 3, 1, 6, 9, 2],
-        [6, 9, 1, 7, 4, 2, 5, 8, 3],
-        [5, 3, 2, 9, 6, 8, 1, 7, 4], 
-        [1, 6, 9, 4, 8, 5, 3, 2, 7],
-        [3, 2, 5, 1, 9, 7, 8, 4, 6],
-        [4, 8, 7, 3, 2, 6, 9, 5, 1]
-      ];
-      var currentRowName;
-      $(document).ready(function(){
-        for(var i=0; i < 9; i++){
-          currentRowName = "row"+ i;
-          console.log("rowName", currentRowName);
-          var temp = '<tr class="'+currentRowName+'"></tr>';
-          console.log(temp);
-          console.log('board', $(".sudokuBoard"));
-          $(".sudokuBoard").append(temp);
-          for(var j=0; j < 9; j++){
-            var elem = '<td onclick="incrementNumber(this,['+i+', '+j+'])">'+ board[i][j] + '</td>';
-            console.log("ELEM: ", elem);
-            $('.'+ currentRowName).append(elem);
-          }
-        }
-      });
-
-      var incrementNumber = function(elem, boardIndexes){
-        console.log('indices: ', boardIndexes);
-        var row = boardIndexes[0];
-        var column = boardIndexes[1];
-        if(board[row][column] === 9 || board[row][column] === 0){
-          elem.innerHTML = 1;
-          board[row][column] = 1;
-        }else{
-          elem.innerHTML = board[row][column] + 1;
-          board[row][column] += 1;
-        }
-      }
-    </script>
-    <table class="sudokuBoard" background="woodbackground.jpg">
+    <script src="app.js"></script>
+    <button class="newBoardButton" type="submit"> New Board </button>
+    <table class="sudokuBoard">
     </table>
   </body>
 </html>
