@@ -2,15 +2,27 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script> 
+    <script src="app.js"></script>   
+    <script src="sudokuBoardValidator.js"></script>
     <link rel="stylesheet" type="text/css" href="http://www.google.com/fonts#QuickUsePlace:quickUse/Family:Shadows+Into+Light">
+
   </head>
   <body>
-    <p class="paragraph">
-    </p>
-    <script src="app.js"></script>
-    <button class="newBoardButton" type="submit"> New Board </button>
+    <img class="sudokuLogo" src="sudokuLogo2.png" height="40%" width="30%">
+    <button class="newBoardButton" onclick="createNewBoard()"> <b>New Game</b> </button>
+      <table class="level">
+        <tr>
+          <td class="num"><b>Level</b></td>
+          <td onclick="setDifficultyLevel(this, 4)" class="num">1</td>
+          <td onclick="setDifficultyLevel(this, 3)" class="num">2</td>
+          <td onclick="setDifficultyLevel(this, 2)" class="num">3</td>
+        </tr>
+      </table>
+    <div>
     <table class="sudokuBoard">
     </table>
+    <div class="finished" onclick="gameFinished()"> <b>Finished Game</b> </div>
+    </div>
   </body>
 </html>

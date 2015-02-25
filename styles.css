@@ -1,4 +1,5 @@
 .sudokuBoard {
+  position: absolute;
   background-repeat: no-repeat;
   background-size:100%;
   text-align: center;
@@ -8,17 +9,24 @@
   margin-right: 25%;
   margin-top: 10%;
   margin-bottom: 25%;
+  table-layout: fixed;
+  background-image: url(woodbackground.jpg);
+  border-spacing: 0;
+  border-radius: 25px;
+  border-image: url(greybackground.jpg) 50 50 round;
+  border-image-repeat: none;
   
 }
 body {
   background-image: url(greybackground.jpg);
 }
-td {
+.boardCell {
   box-shadow: inset;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 35px;
   border-spacing: 0;
   padding-top: 10px;
+  font-family: "Arial";
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -29,24 +37,61 @@ td {
   border-image-repeat: none;
 }
 
-table {
-  table-layout: fixed;
-  background-image: url(woodbackground.jpg);
-  border-spacing: 0;
-  border-radius: 25px;
-  border-image: url(greybackground.jpg) 50 50 round;
-  border-image-repeat: none;
-}
-
 .newBoardButton {
-  margin-left: 25%;
-  height: 70px;
+  position: absolute;
+  margin-top: 0px;
+  margin-left:80%;
+  height: 100px;
   width: 200px;
   background-image: url(woodbackground.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
-  border: 10px solid black;
-  font-size: 25px;
-
+  border: 7px solid black;
+  font-size: 30px;
+  border-radius: 10%;
 }
 
+
+.greyText {
+  color: #4D4D4D;
+  font-size: 25px;
+}
+
+.sudokuLogo {
+  position: absolute;
+  margin-bottom: 60%;
+  margin-right: 60%;
+}
+
+.level {
+  position: absolute;
+  margin-top: 7%;
+  margin-left:56%;
+  font-size: 40px;
+  font-family: "Arial";
+  margin-bottom: 0%;
+  color: black;
+  border-style: none;
+  border-spacing: 0;
+}
+.finished {
+  position: absolute;
+  margin-top: 7%;
+  margin-left:25%;
+  font-size: 40px;
+  font-family: "Arial";
+  margin-bottom: 0%;
+  color: black;
+  border-style: none;
+  border-spacing: 0;
+
+}
+.num {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.whiteNum {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+}

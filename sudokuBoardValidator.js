@@ -1,5 +1,5 @@
 var board = [
-        [5, 5, 3, 2, 1, 4, 7, 6, 8], 
+        [9, 5, 3, 2, 1, 4, 7, 6, 8], 
         [2, 7, 6, 8, 5, 3, 4, 1, 9],
         [8, 1, 4, 6, 7, 9, 2, 3, 5],
         [7, 4, 8, 5, 3, 1, 6, 9, 2],
@@ -103,6 +103,14 @@ var isValidBoard = function(){
     return true;
   }else{
     return false;
+  }
+}
+
+var gameFinished = function(){
+  if(isValidBoard()){
+    alert("You won!");
+  }else{
+    alert("Sorry, this is an invalid solution");
   }
 }
 
