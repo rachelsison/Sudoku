@@ -74,9 +74,10 @@ body {
   cursor: pointer;
   margin-top: 7%;
   margin-left:56%;
-  font-size: 40px;
+  margin-right: 25%;
+  font-size: 30px;
   font-family: "Lucida Sans Unicode";
-  margin-bottom: 0%;
+  margin-bottom: 5%;
   color: black;
   border-style: none;
   border-spacing: 0;
@@ -90,7 +91,7 @@ body {
   position: absolute;
   margin-top: 7%;
   margin-left:25%;
-  font-size: 40px;
+  font-size: 30px;
   font-family: "Lucida Sans Unicode";
   margin-bottom: 0%;
   color: black;
@@ -100,7 +101,7 @@ body {
 }
 .num {
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 10px;
 }
 .whiteNum {
   padding-left: 20px;
