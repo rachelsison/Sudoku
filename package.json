@@ -1,0 +1,21 @@
+{
+  "name": "sudokuChallenge",
+  "version": "0.0.0",
+  "description": "sudoku coding challeng for Uber",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rachelsison/Sudoku"
+  },
+  "keywords": [
+    "sudoku"
+  ],
+  "author": "rachel",
+  "license": "MIT",
+  },
+  "homepage": "https://github.com/rachelsison/Sudoku"
+  }
