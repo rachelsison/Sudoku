@@ -66,8 +66,8 @@ var populateBoard = function(board, rowNumbers){
           while(_.includes(currentColumn, tempIndex){
             tempIndex = Math.floor(Math.random()*rowNumbers.length - 1);
           }
-          board[i][j] = rowNumbers.splice(tempIndex, 1) 
-          if()
+          board[i][j] = rowNumbers.splice(tempIndex, 1); 
+          
         }
       }
     }

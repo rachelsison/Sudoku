@@ -15,7 +15,6 @@ var currentColumn;
 
 var checkRows = function(){
   //if numbers in all rows 1-9 and unique return true
-  console.log("board: ", board);
   for(var i=0; i < 9; i++){
     oneThroughNine = {1:true, 2:true, 3:true, 4:true, 5:true, 6:true, 7:true, 8:true, 9:true};
     for(var j=0; j < 9; j++){
@@ -28,7 +27,6 @@ var checkRows = function(){
       return false;
     }
   }
-  console.log("valid rows");
   return true;
 }
 
@@ -46,7 +44,6 @@ var checkColumns = function(){
       return false;
     }
   }
-  console.log("valid columns");
   return true;
 }
 
@@ -60,40 +57,29 @@ var checkList = function(list){
   if(Object.keys(oneThroughNine).length > 0){
     return false;
   }
-  console.log("valid list");
   return true;
 }
 
 var checkSquares = function(){
   //if numbers in all 3x3 squares 1-9 and unique return true
   var currentSquare;
-  console.log("inCheckSquares");
   //this loop goes through square columns left to right
   for(var i=0; i < 9; i+=3){
-    console.log("in loop i");
     //this loop goes through square rows top to bottom within current square column of above loop
-    for(var j=0; j < 9; j+=3){
-      console.log("in loop j");
       currentSquare = [];
       oneThroughNine = {1:true, 2:true, 3:true, 4:true, 5:true, 6:true, 7:true, 8:true, 9:true};
       //this loop starts at loop start in j to create row (j -> j+3)
       for(var k=j; k < j+3; k++){
-        console.log("in loop k");
         //iterates through
         for(var l=i; l < i+3; l++){
-          console.log("in loop l");
           currentSquare.push(board[k][l]);
-          console.log("pushing: ", board[k][l]);
         }
       }
-      console.log("currentSquare: ", currentSquare);
       if(!checkList(currentSquare)){
-        console.log("invalid Squares");
         return false;
       }
     }
   }
-  console.log("valid Squares");
   return true;
 }
 

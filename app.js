@@ -14,7 +14,7 @@ var globalDifficultyLevel = 2;
 var currentRowName;
 $(document).ready(function(){
   createNewBoard()
-  console.log("firstboard");});
+});
 
 var copyBoard = function(board){
   var results = [];
@@ -37,15 +37,11 @@ var setDifficultyLevel = function(elem, level){
 var createNewBoard = function() {
   var elem;
     board = copyBoard(globalBoard);
-    console.log("in createNewBoard");
     $(".sudokuBoard").empty();
     for(var i=0; i < 9; i++){
     currentRowName = "row"+ i;
     var indicesToShow = chooseNRandomOneThruNine(globalDifficultyLevel);
-    console.log("rowName", currentRowName);
     var temp = '<tr class="'+currentRowName+'"></tr>';
-    console.log(temp);
-    console.log('board', $(".sudokuBoard"));
     $(".sudokuBoard").append(temp);
     for(var j=0; j < 9; j++){
       var numOrBlank = "";
@@ -55,7 +51,6 @@ var createNewBoard = function() {
         elem = '<td class="boardCell greyText" onclick="incrementNumber(this,['+i+', '+j+'])">'+ ""+ '</td>';
         board[i][j] = "";
       }
-      console.log("ELEM: ", elem);
       $('.'+ currentRowName).append(elem);
     }
   }
@@ -73,7 +68,6 @@ var chooseNRandomOneThruNine = function(n){
   return results;
 }
 var incrementNumber = function(elem, boardIndexes){
-  console.log('indices: ', boardIndexes);
   var row = boardIndexes[0];
   var column = boardIndexes[1];
   if(board[row][column] === 9 || board[row][column] === ""){
